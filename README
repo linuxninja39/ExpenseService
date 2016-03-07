@@ -1,0 +1,17 @@
+Design
+I fully drank the Spring cool-aid. I generally have concerns with doing that because, while Spring is almost the
+de-facto standard it is not a java standard. This of course increases our vendor dependence.
+Deleted expenses 'logging' was accomplished by creating a mirrored repository, allowing only for 'deleted'
+expenses, and copying deleted expenses from the main repo to the 'deleted' repo.
+Unit tests are not 100% complete. Coding was started by first creating unit tests that matched the requirements
+description.
+You can do search against /expenses with a 'merchant' parameter.
+
+Assumptions
+I assumed that 'Expense's were the only existing entities and that merchants could be any given string.
+I assumed there is an instance of MongoDB on the localhost
+
+Improvements
+This is a very basic example. Entity relationships could be created. Security could be tightened. I believe it would
+be a better product if we use the HATEOAS methodology for this service especially considering the duel nature of the
+response (objects and errors)
